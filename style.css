@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 99vw;
+    /* background-color: aqua; */
+    background-image: url(beautiful-mountain-lake-background-remix.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.tech{
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+/* Content for smaller screens */
+@media (min-width:0px) and (max-width:998px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2em;
+    }
+    header #mountain{
+        height: 2em;
+    }
+    p{
+        color: white;
+        font-size: 200%;
+        font-family: monospace;
+    }
+    header .navigation-content a{
+        font-size:2em;
+        /* padding: 1em; */
+        margin: 0.3em;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        text-decoration: none;   
+    }
+    header .menu{     
+        background-color: transparent;
+        cursor: pointer;
+        img{
+            width: 2rem;
+            border: none;
+        }
+        margin-right: -20px;
+    }
+    #navigation-content{
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        /* height: 10%; */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        border-radius: 20px;
+        font-size: 0.8em;
+    }
+    .navigation:hover #navigation-content {
+        display: block;
+        color: #333;
+        padding: 10px 10px;
+        text-decoration: none;
+        margin-left: -100px;
+        height: 200px;
+        border-radius: 20px;
+        
+    }
+    .navigation a{
+        color: white;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;
+    }
+    .navigation a:hover{
+        color: rgb(201, 195, 195);
+    }
+    header #login-popup{
+        font-size: 1em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        /* margin-right: 1.5em; */
+        margin-left: em;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border: 2px white solid;
+        border-radius: 15px;
+        transition: background-color 1s;   
+    }   
+    header #login-popup:hover{
+        background-color: white;
+        color: black;
+    }
+    .contact {
+        position: relative;
+        display: inline-block;
+    }
+    /* Style for the button that triggers the contact */
+    .contact button {
+        background-color: transparent;
+        color: #fff;
+        padding: 0.5em;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .contact button:hover{
+        color:  rgb(201, 195, 195);
+    }    
+    /* Style for the contact content (hidden by default) */
+    .contact .contact-content {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        border-radius: 20px;
+        font-size: 0.9em;
+    }
+    /* Show the contact content when hovering over the contact button */
+    .contact:hover .contact-content {
+        display:block;
+    }
+    
+    /* Style for individual contact items */
+    .contact .contact-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 20px;
+    }
+    
+    /* Change color on hover for contact items */
+    .contact .contact-content a:hover {
+        background-color: #ffffff;
+    }
+    .chad{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .master{
+        height: 100%;
+        width: 77%;
+        /* background-color: aqua; */
+        box-sizing: border-box;
+        display: grid;
+        
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-content: center;
+    }
+    .tech{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        /* grid-template-columns: repeat(4,1fr); */
+        grid-template-rows: repeat(4,1fr);
+        padding: 1em;
+        gap: 1em 1em;
+        
+    }
+    .tech-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        
+    }
+    .art{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        /* grid-template-columns: repeat(4,1fr); */
+        grid-template-rows: repeat(2,1fr);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        gap: 1em 1em;
+    }
+    .art-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    }
+    .anime{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        /* grid-template-columns: repeat(4,1fr); */
+        grid-template-rows: repeat(2,1fr);
+        padding-left: 1em;
+        padding-right: 1em;
+        gap: 1em 1em;
+    }
+    .anime-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*Content for laptop displays*/
+@media (min-width:999px) {
+    header{
+        /* border: 2px black solid; */
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        padding: 2em;
+        /* border-bottom: black 1px solid; */
+       
+    }
+    header  #mountain{
+        height: 80px;  
+    }
+    #mega-title{
+        color: white;
+        font-size: 3em;
+        font-family:monospace;
+        align-self: center;
+        /* font-style: italic; */
+        /* font-family:'Dancing Script '; */
+    }
+    header .navigation a{
+        font-size:1.3em;
+        /* padding: 1em; */
+        margin: 0.3em;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        text-decoration: none;
+        
+    }
+    
+    header .navigation a:hover{
+        color: rgb(201, 195, 195);
+    }
+    
+    header #login-popup{
+        font-size: 1em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        /* margin-right: 1.5em; */
+        margin-left: 1em;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        border: 2px white solid;
+        border-radius: 15px;
+        transition: background-color 1s;
+        
+    }   
+    header #login-popup:hover{
+        background-color: white;
+        color: black;
+    }
+    .menu {
+        display: none; /* Hide the button when the width is more than 999px */
+    } 
+    .contact {
+        position: relative;
+        display: inline-block;
+    }
+    /* Style for the button that triggers the contact */
+    .contact button {
+        background-color: transparent;
+        color: #fff;
+        padding: 0.5em;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .contact button:hover{
+        color:  rgb(201, 195, 195);
+    }
+    
+    /* Style for the contact content (hidden by default) */
+    .contact .contact-content {
+        display: none;
+        position: absolute;
+        background-color: transparent;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        z-index: 1;
+        border-radius: 20px;
+        font-size: 0.8em;
+    }
+    /* Show the contact content when hovering over the contact button */
+    .contact:hover .contact-content {
+        display:block;
+    }
+    
+    /* Style for individual contact items */
+    .contact .contact-content a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 20px;
+    }
+    
+    /* Change color on hover for contact items */
+    .contact .contact-content a:hover {
+        background-color: #ffffff;
+    }
+    .chad{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .master{
+        height: 100%;
+        width: 77%;
+        /* background-color: aqua; */
+        box-sizing: border-box;
+        display: grid;
+        
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-content: center;
+    }
+    .tech{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 1em;
+        gap: 1em 1em;
+        
+    }
+    .tech-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        
+    }
+    .art{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        gap: 1em 1em;
+    }
+    .art-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    }
+    .anime{
+        width: 100%;
+        /* background-color: red; */
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding-left: 1em;
+        padding-right: 1em;
+        gap: 1em 1em;
+    }
+    .anime-content{
+        border-radius: 20px;
+        height: 500px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+.introduction{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 300px;
+    color: white;
+    font-family: monospace;
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 0.2em solid black; Blinking cursor effect */
+    animation: typing 10s steps(100, end), blink-caret 60s step-end infinite;
+    span{
+        font-size: 20px;
+    }
+    justify-items: last baseline;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    /* 50% { border-color: black; } */
+}
+
+.cool{
+    width: 100%;
+    height: 300px;
+    color: white;
+    font-family: monospace;
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid black;
+    animation: typing2 8s steps(100, end) 3s, blink-caret2 60s step-end infinite;
+    opacity: 0;
+    span{
+        font-size: 20px;
+    }
+    justify-content: center;
+}
+@keyframes typing2 {
+    
+    from { width: 0; opacity: 1; }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret2 {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* card */
+
+
+.card-image-container{
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
+}
+.card-image-container .card-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card-text-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.card-text-container .card-text-title a{
+    font-family: monospace;
+    color: white;
+    font-size: 3em;
+    font-weight: 800;
+    text-decoration: none;
+    
+}
+
+.card-text-container .card-text-title{
+    padding-bottom: 0.5em;
+}
+
+.card-text-container .card-text-title a:hover{
+    color: grey;
+}
+
+.card-text-container .card-text-content{
+    font-family: monospace;
+    color: white;
+    font-size: 1.5em;
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-top: 9%;
+}
+
+
+.user-photo{
+    height: 3em;
+}
+
+.topic{
+    border: solid white 1px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: monospace;
+    color: white;
+}
