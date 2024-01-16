@@ -47,7 +47,7 @@ body{
         background-color: transparent;
         cursor: pointer;
         img{
-            width: 2rem;
+            width: 20px;
             border: none;
         }
         margin-right: -20px;
