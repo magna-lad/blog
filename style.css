@@ -46,10 +46,8 @@ body{
     header .menu{     
         background-color: transparent;
         cursor: pointer;
-        img{
-            width: 20px;
-            border: none;
-        }
+        width: 20px;
+        border: none;
         margin-right: -20px;
     }
     #navigation-content{
