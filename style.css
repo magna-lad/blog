@@ -46,8 +46,10 @@ body{
     header .menu{     
         background-color: transparent;
         cursor: pointer;
-        width: 20px;
-        border: none;
+        img{
+            width: 30px;
+            border: none;
+        }
         margin-right: -20px;
     }
     #navigation-content{
@@ -524,6 +526,7 @@ footer{
 
 .user-photo{
     height: 3em;
+    border-radius: 20pxk;
 }
 
 .topic{
