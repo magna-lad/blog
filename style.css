@@ -49,7 +49,7 @@ body{
         img{
             border: none;
         }
-        margin-right: -20px;
+        margin: 3px;
     }
     #navigation-content{
         display: none;
